@@ -43,14 +43,12 @@ function detectLanguage(
   request: Request,
   config: TastroConfig
 ): string {
-  // ① Cookie 优先
   const cookie = request.headers.get("cookie")
   const cookieLang = parseCookie(cookie)?.lang
   if (cookieLang && config.languages[cookieLang]) {
     return cookieLang
   }
 
-  // ② Accept-Language
   const header = request.headers.get("accept-language")
   if (!header) return config.defaultLang
 
@@ -74,7 +72,6 @@ function parseCookie(cookie?: string | null): Record<string, string> {
     })
   )
 }
-
 
 function parseAcceptLanguage(header: string): string[] {
   return header
