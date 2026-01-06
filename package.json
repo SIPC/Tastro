@@ -1,5 +1,5 @@
 {
-  "name": "tastro",
+  "name": "@sipc.ink/tastro",
   "version": "0.1.0",
   "description": "SSR-first i18n for Astro",
   "type": "module",
