@@ -2,25 +2,25 @@
 
 SSR-first i18n for Astro.
 
-[English](README.en.md) | 中文
+English | [中文](README.md)
 
-## 演示
+## Demo
 
-[sipc.ink](https://sipc.ink) 进入后在控制台输入
+[sipc.ink](https://sipc.ink) After entering, input in the console
 ```
 setLang("en")
 setLang("zh")
 ```
 
-## 安装
+## Installation
 
 ```bash
 pnpm i "@sipc.ink/tastro"
 ```
 
-## 使用
+## Usage
 
-### 1. 配置
+### 1. Configuration
 
 ```astro
 ---
@@ -37,7 +37,7 @@ initTastro({
 
 ```
 
-### 2. 创建翻译文件
+### 2. Create translation files
 
 **`./locales/zh.json`**
 ```json
@@ -55,27 +55,27 @@ initTastro({
 }
 ```
 
-### 3. 在 Astro 中使用
+### 3. Use in Astro
 
 ```astro
 ---
 import { useTastro } from '@sipc.ink/tastro'
 
 const { t, lang } = useTastro(Astro.request)
-// 引入 request 是为了自动判断请求中的 Accept-Language
+// Passing request is for automatically detecting Accept-Language in the request
 ---
 
-// 普通
+// Normal
 <h1>{t('welcome')}</h1>
 
-// 插值
+// Interpolation
 <h1>{t('login-time',{ time: "114514" })}</h1>
 
-// 浏览器语言
-<p>当前语言: {lang}</p>
+// Browser language
+<p>Current language: {lang}</p>
 ```
 
-### 4. 手动切换语言
+### 4. Manually switch language
 
 ```html
 <script>
@@ -88,14 +88,15 @@ const { t, lang } = useTastro(Astro.request)
 
 ## API
 
-- `initTastro(config)` - 初始化配置
-- `useTastro(request)` - 创建运行时
-  - `t(key, vars)` - 翻译文本
-  - `lang` - 当前语言
+- `initTastro(config)` - Initialize configuration
+- `useTastro(request)` - Create runtime
+  - `t(key, vars)` - Translate text
+  - `lang` - Current language
 
-## 特性
+## Features
 
-- 🚀 SSR 优先
-- ⚡ 零依赖，轻量
-- 📦 自动缓存
-- 🍪 智能语言检测（Cookie → Accept-Language → 默认）
+- 🚀 SSR-first
+- ⚡ Zero dependencies, lightweight
+- 📦 Automatic caching
+- 🍪 Smart language detection (Cookie → Accept-Language → Default)
+```
