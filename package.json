@@ -25,6 +25,10 @@
     "i18n",
     "ssr"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SIPC/Tastro"
+  },
   "license": "MIT",
   "devDependencies": {
     "tsup": "^8.5.1"
