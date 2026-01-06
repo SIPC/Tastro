@@ -1,6 +1,6 @@
 {
-  "name": "@sipc.ink/tastro",
-  "version": "0.1.4",
+  "name": "@sipcink/tastro",
+  "version": "0.1.5",
   "description": "SSR-first i18n for Astro",
   "type": "module",
   "exports": {
