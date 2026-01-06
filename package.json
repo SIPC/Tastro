@@ -1,0 +1,35 @@
+{
+  "name": "tastro",
+  "version": "0.1.0",
+  "description": "SSR-first i18n for Astro",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "astro",
+    "i18n",
+    "ssr"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.1"
+  },
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
